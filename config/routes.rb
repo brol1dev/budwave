@@ -11,4 +11,7 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "posts#index"
+
+  root "weights#index"
+  get "/weights", to: "weights#index", as: :weights
 end
