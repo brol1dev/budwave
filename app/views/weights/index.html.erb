@@ -3,7 +3,9 @@
 <ul>
     <% @weights.each do |weight| %>
     <li>
-        <%= weight.weight_kg %>
+        <a href="weights/<%= weight.id %>">
+            <%= weight.weight_kg %>
+        </a>
     </li>
     <% end %>
 </ul>

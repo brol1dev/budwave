@@ -14,4 +14,5 @@ Rails.application.routes.draw do
 
   root "weights#index"
   get "/weights", to: "weights#index", as: :weights
+  get "/weights/:id", to: "weights#show"
 end
