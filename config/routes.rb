@@ -9,6 +9,9 @@ Rails.application.routes.draw do
   get "service-worker" => "rails/pwa#service_worker", as: :pwa_service_worker
   get "manifest" => "rails/pwa#manifest", as: :pwa_manifest
 
+  # Path configuration for iOS
+  get "path-configuration", to: "path_configuration#show", as: :path_configuration
+
   # Defines the root path route ("/")
   root "weights#index"
 
