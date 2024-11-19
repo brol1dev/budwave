@@ -1,10 +1,12 @@
 <h1>Weights</h1>
 
+<%= link_to "New Weight Entry", new_weight_path %>
+
 <ul>
     <% @weights.each do |weight| %>
     <li>
         <a href="weights/<%= weight.id %>">
-            <%= weight.weight_kg %>
+            <%= weight.weight_kg %> - <%= weight.date %>
         </a>
     </li>
     <% end %>

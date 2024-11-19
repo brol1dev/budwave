@@ -8,7 +8,7 @@
 import HotwireNative
 import UIKit
 
-let rootURL = URL(string: "https://hotwire-native-demo.dev")!
+let rootURL = URL(string: "http://localhost:3000")!
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     
