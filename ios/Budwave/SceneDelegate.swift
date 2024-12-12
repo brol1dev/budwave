@@ -29,13 +29,15 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         Hotwire.config.debugLoggingEnabled = true
 #endif
         
-        let loginViewController = LoginViewController()
-        loginViewController.delegate = self
+        //        let loginViewController = LoginViewController()
+        //        loginViewController.delegate = self
+        //
+        //        window?.rootViewController = loginViewController
         
-        window?.rootViewController = loginViewController
+        Hotwire.registerBridgeComponents([StraditaComponent.self])
         
-//        window?.rootViewController = navigator.rootViewController
-//        navigator.route(rootURL)
+        window?.rootViewController = navigator.rootViewController
+        navigator.route(rootURL)
     }
 }
 
