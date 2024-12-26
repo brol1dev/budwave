@@ -7,6 +7,7 @@
 
 import HotwireNative
 import UIKit
+import WebKit
 
 let rootURL = URL(string: "http://localhost:3000")!
 
@@ -27,6 +28,22 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 #if DEBUG
         Hotwire.config.debugLoggingEnabled = true
 #endif
+        
+        //        let loginViewController = LoginViewController()
+        //        loginViewController.delegate = self
+        //
+        //        window?.rootViewController = loginViewController
+        
+        Hotwire.registerBridgeComponents([StraditaComponent.self])
+        
+        window?.rootViewController = navigator.rootViewController
+        navigator.route(rootURL)
+    }
+}
+
+extension SceneDelegate: LoginViewControllerDelegate {
+    func loginViewControllerDidLogin(_ loginViewController: LoginViewController) {
+        
         
         window?.rootViewController = navigator.rootViewController
         navigator.route(rootURL)
