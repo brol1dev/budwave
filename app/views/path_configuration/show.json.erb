@@ -2,7 +2,16 @@
   "rules": [
     {
       "patterns": [
-        "weights/new$"
+        ".*"
+      ],
+      "properties": {
+        "context": "default",
+        "pull_to_refresh_enabled": true
+      }
+    },
+    {
+      "patterns": [
+        "/new$"
       ],
       "properties": {
         "context": "modal",
