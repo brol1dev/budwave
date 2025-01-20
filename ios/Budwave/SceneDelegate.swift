@@ -21,13 +21,14 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         .server(remotePathConfigUrl)
     ])
     
-    private lazy var navigator = Navigator(pathConfiguration: pathConfiguration)
+    private lazy var navigator = Navigator()
     
     
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
 #if DEBUG
         Hotwire.config.debugLoggingEnabled = true
 #endif
+        Hotwire.loadPathConfiguration(from: [.server(remotePathConfigUrl)])
         
         //        let loginViewController = LoginViewController()
         //        loginViewController.delegate = self
